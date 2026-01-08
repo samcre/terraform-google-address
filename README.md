@@ -202,7 +202,7 @@ Terraform may change this fact, but this is the current limitation.
 | prefix\_length | The prefix length of the IP range. | `number` | `16` | no |
 | project\_id | The project ID to create the address in | `string` | n/a | yes |
 | purpose | The purpose of the resource(GCE\_ENDPOINT, SHARED\_LOADBALANCER\_VIP, VPC\_PEERING). | `string` | `"GCE_ENDPOINT"` | no |
-| region | The region to create the address in | `string` | n/a | yes |
+| region | The region to create the address in. Defaults to `null`, but required if global == `false` | `string` | `null` | no |
 | subnetwork | The subnet containing the address.  For EXTERNAL addresses use the empty string, "".  (e.g. "projects/<project-name>/regions/<region-name>/subnetworks/<subnetwork-name>") | `string` | `""` | no |
 
 ## Outputs

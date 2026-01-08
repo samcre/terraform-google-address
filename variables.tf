@@ -21,7 +21,7 @@ variable "project_id" {
 
 variable "region" {
   type        = string
-  description = "The region to create the address in"
+  description = "The region to create the address in. Defaults to `null`, but required if global == `false`"
   default     = null
 
   validation {
