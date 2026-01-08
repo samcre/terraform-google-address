@@ -22,6 +22,12 @@ variable "project_id" {
 variable "region" {
   type        = string
   description = "The region to create the address in"
+  default     = null
+
+  validation {
+    condition     = var.global == true || var.region != null
+    error_message = "The region variable must be set when global is false (regional addresses require a region)."
+  }
 }
 
 variable "names" {
